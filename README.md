@@ -97,7 +97,7 @@ Google currently offers a [free trial](cloud.google.com/freetrial) of Google Clo
 <br/>
 
 #### 4) Create a new GCP *account,* *project,* and *service account* under `IAM & admin > service account`  
-Service accounts handle security clearances for Google Cloud Platform (GCP) services, but default service accounts are temperamental.  Create a new service account with *storage admin* and *log writing* clearance.
+Service accounts handle security clearances for GCP services, but default service accounts are temperamental.  Create a new service account with *storage admin* and *log writing* clearance.
 
 <br/>
 
@@ -147,7 +147,7 @@ Navigate to the GCP Compute Engine page and access DrawAI as:
 <br/>
 
 #### 9) Install Docker CE 18.03.1 per [here](https://docs.docker.com/install/linux/docker-ce/debian/#install-from-a-package)
-Certain GCP services are incompatible with Docker <18.03 or >18.1, more [here]( https://cloud.google.com/container-registry/docs/advanced-authentication).
+Certain GCP services are incompatible with Docker <18.03 or >18.1, more [here](https://cloud.google.com/container-registry/docs/advanced-authentication).
 
 May require libltdl7:
 ```
