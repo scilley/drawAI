@@ -4,7 +4,7 @@ DrawAI is an interactive deep learning project to research content creation with
 
 GANs, created in 2014 by [Ian Goodfellow et al](https://arxiv.org/pdf/1406.2661.pdf), are advancements in neural networks that train two models in tandem, one *generating* random data with another *discriminating* against fake outputs.  Typically used in image synthesis, GANs have grown in popularity from headlines about deepfakes and [this person doesn’t exist](https://thispersondoesnotexist.com/).  NVIDIA’s SPADE (SPatially ADaptivE normalization for semantic image synthesis) effectively consolidates features of previous GAN releases under one model, powering tools like DrawAI and NVIDIA's upcoming [GauGAN](https://www.youtube.com/watch?v=MXWm6w4E5q0) while outperforming on key performance benchmarks (assuming full GPU support).
 
-Host DrawAI locally on a PC or linux environment by following steps 1-3 below, or as a webapp in steps 4-12 using Google Cloud Platform (example at [dscil.xyz](dscil.xyz)). An appendix includes notes on VAE style training and similar GAN applications.
+Host DrawAI locally on a PC or linux environment by following steps 1-3 below, or as a webapp in steps 4-12 using Google Cloud Platform (example at [dscil.xyz](dscil.xyz)). An appendix includes notes on VAE style training and similar GAN applications as well.
 
 <br/>
 
