@@ -16,7 +16,7 @@ Minimum requirements:
 - Modern CPU with 2GB+ ram
 - (optional) Anaconda 4.6+
 
-Draw AI runs on a pretrained SPADE model with *GPU support disabled* by default, keeping server costs low and minimizing dependencies.  However, users with CUDA-supported machines can enable GPUs for enhanced performance (per “XYZ instructions” below).
+Draw AI runs on a pretrained SPADE model with *GPU support disabled* by default, keeping server costs low and minimizing dependencies.  However, users with CUDA-supported machines can enhance performance by enabling enable GPUs under `DrawAI > options > base options > line 25`.
 
 <br/>
 
