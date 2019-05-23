@@ -88,13 +88,15 @@ Using a web browser, navigate to:
 
 Note: Shut down the DrawAI python server by typing `ctrl+c`.
 
+<br/>
+
 ### Webapp Setup on Google Cloud Platform (External IP)
 
-(Mention free trial / other services)  
+Google currently offers a [free trial](cloud.google.com/freetrial) of Google Cloud Platform (GCP), but AWS, Azure, and others should function similarly.  
 
 <br/>
 
-#### 4) Create a new [Google Cloud Platform](https://cloud.google.com/) *account,* *project,* and *service account* under `IAM & admin > service account`  
+#### 4) Create a new GCP *account,* *project,* and *service account* under `IAM & admin > service account`  
 Service accounts handle security clearances for Google Cloud Platform (GCP) services, but default service accounts are temperamental.  Create a new service account with *storage admin* and *log writing* clearance.
 
 <br/>
