@@ -1,6 +1,6 @@
 # DrawAI with NVIDIA SPADE
 
-DrawAI is an interactive deep learning project to explore content creation with GANs (general adversarial networks) and experiment with python webapps.  Users can convert quick drawings into photorealistic landscapes with AI based on NVIDIA's SPADE model.  Thanks to the code available on the [SPADE](https://github.com/NVlabs/SPADE), [smart-sketch](https://github.com/noyoshi/smart-sketch), and [drawingboard](https://github.com/Leimi/drawingboard.js/) githubs, implementation is straightforward through python, javascript, and html, with adjustments made in this repository for mobile users and deployment options.  
+DrawAI is an interactive deep learning project to research content creation with GANs (general adversarial networks) and experiment with python webapps.  Users can convert quick drawings into photorealistic landscapes with AI based on NVIDIA's SPADE model.  Thanks to the code available on the [SPADE](https://github.com/NVlabs/SPADE), [smart-sketch](https://github.com/noyoshi/smart-sketch), and [drawingboard](https://github.com/Leimi/drawingboard.js/) githubs, implementation is straightforward through python, javascript, and html, with adjustments made in this repository for mobile users and deployment options.  
 
 GANs, created in 2014 by [Ian Goodfellow et al](https://arxiv.org/pdf/1406.2661.pdf), are new advancements in neural networks that train two models in tandem, one *generating* random data with another *discriminating* against fake outputs.  Typically used in image synthesis, GANs have grown in popularity from headlines about deepfakes and [this person doesn’t exist](https://thispersondoesnotexist.com/).  NVIDIA’s SPADE (SPatially ADaptivE normalization for semantic image synthesis) effectively consolidates features of previous GAN releases under one model, powering tools like DrawAI and NVIDIA's upcoming [GauGAN](https://www.youtube.com/watch?v=MXWm6w4E5q0) while outperforming on key performance benchmarks (assuming full GPU support).
 
@@ -141,7 +141,7 @@ python3 server.py
 
 Navigate to the GCP Compute Engine page and access DrawAI as:
 ```
-[external ip]:8080.
+[external ip]:8080
 ```
 
 <br/>
@@ -198,6 +198,22 @@ Last, use the link at the top of the Google Cloud Run webpage to use DrawAI!  Th
 
 <br/>
 
-#### Appendix: Training, Stylization, and Extended Applications of GANs
+#### Appendix: Training, VAE Stylization, and Extended Applications of GANs
 
-TBD
+###### Training and VAE Stylization
+NVIDIA trained SPADE on 8 Tesla V100 GPUs, which are very expensive to buy or rent.  However if the hardware is available, a custom SPADE model can be trained following steps on the official [github](https://github.com/nvlabs/spade/).  Custom models can be trained on larger samples like Flickr Landscapes to boost image quality, or be trained with VAE (variable auto-encoder) style training.  While VAEs often [blur](https://skymind.ai/wiki/generative-adversarial-network-gan) generated images, they can be used to introduce style flavors to generate different types of clouds, mountains, or other objects.  The model behind DrawAI was trained without VAE to let users reproduce and compare results, but a VAE enabled model will generate different images from the same inputs.
+
+###### Extended Applications of GANs
+With full GPU support, SPADE offers seemingly limitless capabilities for content creation, but other GAN approaches may require less overhead or excel at individual tasks.  A few favorites:
+
+- [CycleGAN](https://github.com/junyanz/CycleGAN) which can replace VAE style transfer, requiring only a few hundred training photos to create overlays like Monet-to-photo, summer-to-winter, etc
+- [StyleGAN](https://github.com/NVlabs/stylegan) to create realistic photos of imaginary people like [this person does not exist](https://thispersondoesnotexist.com/)
+- GANs for [text-to-image synthesis](https://github.com/reedscot/icml2016https://github.com/reedscot/icml2016) to generate pictures from text captions
+
+#### Citation
+@inproceedings{park2019SPADE,
+  title={Semantic Image Synthesis with Spatially-Adaptive Normalization},
+  author={Park, Taesung and Liu, Ming-Yu and Wang, Ting-Chun and Zhu, Jun-Yan},
+  booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+  year={2019}
+}
