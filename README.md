@@ -201,11 +201,10 @@ Last, use the link at the top of the Google Cloud Run webpage to use DrawAI!  Th
 #### Appendix: Training, VAE Stylization, and Extended Applications of GANs
 
 ###### Training and VAE Stylization
-NVIDIA trained SPADE on 8 Tesla V100 GPUs, which are very expensive to buy or rent.  However if the hardware is available, a custom SPADE model can be trained following steps on the official [github](https://github.com/nvlabs/spade/).  Custom models can be trained on larger samples like Flickr Landscapes to boost image quality, or be trained with VAE (variable auto-encoder) style training.  While VAEs often [blur](https://skymind.ai/wiki/generative-adversarial-network-gan) generated images, they can be used to introduce style flavors to generate different types of clouds, mountains, or other objects.  The model behind DrawAI was trained without VAE to let users reproduce and compare results, but a VAE enabled model will generate different images from the same inputs.
+NVIDIA trained SPADE on 8 Tesla V100 GPUs, which are expensive.  However if hardware is available, train custom SPADE models  following steps on their official [github](https://github.com/nvlabs/spade/).  Custom models can be trained on larger samples like Flickr Landscapes to boost image quality, or with VAE (variable auto-encoder) style training.  While VAEs often [blur](https://skymind.ai/wiki/generative-adversarial-network-gan) generated images, they can be used to introduce style flavors to generate variants of clouds, mountains, or other objects.  The model behind DrawAI was trained without VAE to let users reproduce and compare results, but a VAE enabled model generates different images from identical inputs.
 
 ###### Extended Applications of GANs
 With full GPU support, SPADE offers seemingly limitless capabilities for content creation, but other GAN approaches may require less overhead or excel at individual tasks.  A few favorites:
-
 - [CycleGAN](https://github.com/junyanz/CycleGAN) which can replace VAE style transfer, requiring only a few hundred training photos to create overlays like Monet-to-photo, summer-to-winter, etc
 - [StyleGAN](https://github.com/NVlabs/stylegan) to create realistic photos of imaginary people like [this person does not exist](https://thispersondoesnotexist.com/)
 - GANs for [text-to-image synthesis](https://github.com/reedscot/icml2016https://github.com/reedscot/icml2016) to generate pictures from text captions
